@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acciones: inversión en el mercado bursátil</title>
+
+  <!-- Google Fonts + Iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="tech-header">
+    <h1>Acciones: <br />inversión en el mercado bursátil</h1>
+    <canvas id="network"></canvas>
+  </header>
+
+  <!-- NAVBAR -->
+  <header class="navbar horizontal">
+    <div class="nav-container">
+      <nav class="nav-links horizontal" aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="tipos.html">Tipos de Inversion</a>
+        <a href="fija.html">Renta Fija</a>
+        <a href="fondos.html">Fondos Indexados</a>
+        <a href="acciones.html">Acciones</a>
+        <a href="criptos.html">Criptomoneda</a>
+        <a href="oro.html">Oro</a>
+        <a href="immuebles.html">Immuebles</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main style="max-width: 900px; margin: 6rem auto 3rem; padding: 0 1rem; font-family: 'Poppins', sans-serif; color: #333;">
+
+    <section aria-label="¿Qué son las acciones?" data-aos="fade-up">
+      <h2>¿Qué son las acciones?</h2>
+      <p>
+        Las acciones representan una parte proporcional de la propiedad en una empresa. Al comprar acciones, te conviertes en accionista y puedes beneficiarte del crecimiento y las ganancias de la empresa a través de dividendos y la valorización del precio de la acción.
+      </p>
+    </section>
+
+    <section id="ventajas-acciones" aria-label="Ventajas de invertir en acciones" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Ventajas de invertir en acciones</h2>
+      <ul data-aos="fade-up" data-aos-delay="100" style="list-style: disc; margin-left: 1.5rem;">
+        <li>Potencial de altas ganancias a largo plazo.</li>
+        <li>Posibilidad de recibir dividendos periódicos.</li>
+        <li>Liquidez alta: puedes comprar y vender fácilmente en el mercado.</li>
+        <li>Participación en el crecimiento y decisiones de la empresa.</li>
+      </ul>
+    </section>
+
+    <section id="riesgos-acciones" aria-label="Riesgos de invertir en acciones" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Riesgos de invertir en acciones</h2>
+      <ul data-aos="fade-up" data-aos-delay="100" style="list-style: disc; margin-left: 1.5rem;">
+        <li>Volatilidad del mercado que puede afectar el precio.</li>
+        <li>Riesgo de pérdida parcial o total del capital invertido.</li>
+        <li>Influencia de factores externos como economía y política.</li>
+        <li>Necesidad de conocimiento y análisis constante.</li>
+      </ul>
+    </section>
+
+    <section id="cómo-invertir" aria-label="Cómo invertir en acciones" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">¿Cómo invertir en acciones?</h2>
+      <ol data-aos="fade-up" data-aos-delay="100" style="padding-left: 1.5rem;">
+        <li>Abre una cuenta en una casa de bolsa o plataforma de trading confiable.</li>
+        <li>Investiga y selecciona empresas con buen potencial y fundamentos sólidos.</li>
+        <li>Define tu estrategia de inversión (largo plazo, trading, dividendos, etc.).</li>
+        <li>Monitorea tus inversiones y ajusta según el comportamiento del mercado.</li>
+      </ol>
+    </section>
+
+    <section id="consejos" aria-label="Consejos para invertir en acciones" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Consejos para invertir en acciones</h2>
+      <ul data-aos="fade-up" data-aos-delay="100" style="list-style: disc; margin-left: 1.5rem;">
+        <li>Diversifica tu portafolio para reducir riesgos.</li>
+        <li>Evita decisiones impulsivas basadas en emociones.</li>
+        <li>Capacítate continuamente sobre análisis financiero y mercado.</li>
+        <li>Ten paciencia y visión a largo plazo.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    const canvas = document.getElementById('network');
+    const ctx = canvas.getContext('2d');
+
+    let points = [];
+    let width, height;
+
+    function resizeCanvas() {
+      width = canvas.width = canvas.clientWidth;
+      height = canvas.height = canvas.clientHeight;
+    }
+
+    function initPoints() {
+      points = [];
+      for (let i = 0; i < 60; i++) {
+        points.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5
+        });
+      }
+    }
+
+    function distance(p1, p2) {
+      return Math.hypot(p1.x - p2.x, p1.y - p2.y);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          const dist = distance(points[i], points[j]);
+          if (dist < 120) {
+            ctx.strokeStyle = `rgba(0, 0, 0, ${1 - dist / 120})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      points.forEach((p) => {
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      points.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    function start() {
+      resizeCanvas();
+      initPoints();
+      draw();
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      initPoints();
+    });
+
+    start();
+  </script>
+
+</body>
+</html>
 
