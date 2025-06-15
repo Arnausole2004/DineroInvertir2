@@ -1,8 +1,8 @@
 :root {
-  --azul-oscuro: #1E3A8A;      /* Azul profundo para títulos y énfasis */
-  --azul-medio: #3B82F6;       /* Azul vibrante para botones y destacados */
-  --azul-claro: #60A5FA;       /* Azul suave para fondos o hover */
-  --azul-muy-claro: #DBEAFE;   /* Fondo muy claro */
+  --azul-oscuro: #2563EB;      /* Azul vivo para títulos y textos importantes */
+  --azul-medio: #60A5FA;       /* Azul claro para fondos y botones */
+  --azul-claro: #93C5FD;       /* Azul más suave para hover y detalles */
+  --azul-muy-claro: #EFF6FF;   /* Azul muy pálido para fondos generales */
   --gris-texto: #444444;
   --blanco: #ffffff;
   --radio: 0.75rem;
@@ -18,7 +18,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--gris-texto);
-  background: var(--blanco);
+  background: var(--azul-muy-claro);  /* Fondo general azul muy claro */
   scroll-behavior: smooth;
   line-height: 1.6;
   text-align: justify;
@@ -41,7 +41,7 @@ h1, h2, h3 {
   color: var(--blanco);
   text-align: center;
   padding: 3rem 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
   height: 280px;
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@ h1, h2, h3 {
 
 /* ===== NAVBAR ===== */
 .navbar.horizontal {
-  background-color: #000;
+  background-color: #1E40AF; /* Azul oscuro para navbar */
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -107,7 +107,7 @@ h1, h2, h3 {
   margin: 2rem auto;
   background-color: var(--blanco);
   border-radius: var(--radio);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.1);
 }
 
 .section h2 {
@@ -126,7 +126,7 @@ h1, h2, h3 {
   margin: 0 auto 4rem;
   background: var(--azul-muy-claro);
   border-radius: var(--radio);
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
   padding: 2rem;
 }
 
@@ -155,6 +155,8 @@ h1, h2, h3 {
   font-size: 1rem;
   resize: vertical;
   transition: border-color 0.3s ease;
+  background: var(--blanco);
+  color: var(--gris-texto);
 }
 
 .contact-form input:focus,
@@ -205,4 +207,3 @@ footer {
     gap: 1rem;
   }
 }
-
