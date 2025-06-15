@@ -1,180 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tu Sitio de Finanzas</title>
-  <link rel="stylesheet" href="app.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cómo dominar tus finanzas personales: guía completa</title>
+
+  <!-- Google Fonts + Iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
 
-<!-- Header -->
-<header class="header">
-  <div class="container header-container">
-    <div class="logo">Finanzas Pro</div>
-    <nav class="nav">
-      <a href="#inicio">Inicio</a>
-      <a href="#plan">Plan</a>
-      <a href="#testimonios">Testimonios</a>
-      <a href="#faq">FAQ</a>
-      <a href="#equipo">Equipo</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
+  <!-- HEADER PRINCIPAL -->
+  <header class="tech-header">
+    <h1>Cómo dominar tus finanzas personales: <br />guía completa para principiantes</h1>
+    <canvas id="network"></canvas>
+  </header>
 
-<!-- Hero -->
-<section class="hero" id="inicio">
-  <h1 class="fade-in-up">Domina tus Finanzas Personales</h1>
-  <p class="fade-in-up">Aprende a controlar tus gastos, planificar tu futuro y alcanzar tus metas financieras de forma efectiva.</p>
-  <a href="#plan" class="btn-primary fade-in-up">Comienza Ahora</a>
-</section>
+  <!-- NAVBAR -->
+  <header class="navbar horizontal">
+    <div class="nav-container">
+      <nav class="nav-links horizontal" aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="#objetivos">Objetivos Financieros</a>
+        <a href="#pasos">Pasos Básicos</a>
+        <a href="#consejos">Consejos</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- Plan Financiero -->
-<section id="plan" class="financial-step">
-  <h2 class="step-title">Plan Financiero en 3 Pasos</h2>
-  <p class="step-intro">Sigue estos pasos simples para mejorar tus finanzas personales desde hoy:</p>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main style="max-width: 900px; margin: 6rem auto 3rem; padding: 0 1rem; font-family: 'Poppins', sans-serif; color: #333;">
 
-  <div class="step-content">
-    <h3>1. Evalúa tu situación actual</h3>
-    <p>Haz un inventario de tus ingresos, gastos, deudas y ahorros. Esto te dará claridad sobre dónde estás parado.</p>
+    <!-- OBJETIVOS FINANCIEROS -->
+    <section id="objetivos" aria-label="Objetivos financieros">
+      <h2 data-aos="fade-up">Establece tus objetivos financieros</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Definir metas claras es el primer paso para mejorar tus finanzas personales. Pueden ser a corto, mediano o largo plazo.
+      </p>
+      <ul data-aos="fade-up" data-aos-delay="200">
+        <li>Ahorro para emergencias</li>
+        <li>Pago de deudas</li>
+        <li>Inversión para retiro</li>
+        <li>Compra de bienes o propiedades</li>
+      </ul>
+    </section>
 
-    <h3>2. Establece metas claras</h3>
-    <p>Define objetivos financieros específicos: ahorrar para un viaje, pagar una deuda, invertir para el futuro, etc.</p>
+    <!-- PASOS BÁSICOS -->
+    <section id="pasos" aria-label="Pasos básicos para mejorar tus finanzas" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Pasos básicos para mejorar tus finanzas hoy</h2>
+      <ol data-aos="fade-up" data-aos-delay="100">
+        <li><strong>Evalúa tu situación actual:</strong> Conoce cuánto ganas, gastas y debes.</li>
+        <li><strong>Haz un presupuesto realista:</strong> Controla tus ingresos y gastos mensuales.</li>
+        <li><strong>Reduce gastos innecesarios:</strong> Identifica y elimina gastos que no aportan valor.</li>
+        <li><strong>Automatiza tus ahorros:</strong> Aparta un porcentaje de tus ingresos automáticamente.</li>
+        <li><strong>Invierte con conocimiento:</strong> Infórmate y comienza con inversiones seguras.</li>
+      </ol>
+    </section>
 
-    <h3>3. Crea y sigue tu plan</h3>
-    <p>Desarrolla un presupuesto mensual, automatiza tus ahorros, y revisa tu progreso periódicamente para mantener el rumbo.</p>
-  </div>
-</section>
+    <!-- CONSEJOS -->
+    <section id="consejos" aria-label="Consejos para finanzas personales" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Consejos para mantener unas finanzas saludables</h2>
+      <div data-aos="fade-up" data-aos-delay="100" style="margin-bottom: 1.5rem;">
+        <i class="fa-solid fa-wallet" style="color:#4CAF50; margin-right:0.5rem;"></i>
+        <strong>Controla tus gastos diarios.</strong> Llevar un registro te ayuda a evitar gastos impulsivos.
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200" style="margin-bottom: 1.5rem;">
+        <i class="fa-solid fa-piggy-bank" style="color:#4CAF50; margin-right:0.5rem;"></i>
+        <strong>Crea un fondo de emergencia.</strong> Guarda al menos 3 meses de gastos básicos para imprevistos.
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300" style="margin-bottom: 1.5rem;">
+        <i class="fa-solid fa-book" style="color:#4CAF50; margin-right:0.5rem;"></i>
+        <strong>Educa continuamente.</strong> Lee libros y sigue cursos para mejorar tu conocimiento financiero.
+      </div>
+    </section>
 
-<!-- Consejos -->
-<section>
-  <h2>Consejos Financieros</h2>
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" aria-label="Testimonios de usuarios" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Testimonios</h2>
+      <blockquote data-aos="fade-up" data-aos-delay="100" style="font-style: italic; border-left: 4px solid #4CAF50; padding-left: 1rem; margin-bottom: 2rem;">
+        "Esta guía me ayudó a organizar mis finanzas y empezar a ahorrar para mi primer inversión. ¡Muy recomendada!"
+        <br /><strong>— Ana R.</strong>
+      </blockquote>
+      <blockquote data-aos="fade-up" data-aos-delay="200" style="font-style: italic; border-left: 4px solid #4CAF50; padding-left: 1rem;">
+        "Gracias a los consejos y pasos claros, pude reducir mis deudas y mejorar mi presupuesto mensual."
+        <br /><strong>— Jorge M.</strong>
+      </blockquote>
+    </section>
 
-  <div class="card fade-in-up">
-    <h3>Haz un presupuesto realista</h3>
-    <p>Planifica tus gastos con base en tus ingresos reales. No olvides incluir categorías para ahorro e imprevistos.</p>
-  </div>
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="contacto-simple" aria-label="Formulario de contacto" style="margin-top: 3rem;">
+      <div class="contacto-box" data-aos="fade-up">
+        <h2 class="contact-title">Contacto</h2>
+        <form class="contact-form" action="/tu-endpoint" method="POST">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required />
 
-  <div class="card fade-in-up">
-    <h3>Evita deudas innecesarias</h3>
-    <p>Piensa dos veces antes de usar tu tarjeta de crédito. Pregúntate si puedes pagar ese gasto hoy sin endeudarte.</p>
-  </div>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
 
-  <div class="card fade-in-up">
-    <h3>Invierte en tu educación financiera</h3>
-    <p>Lee libros, escucha podcasts o toma cursos sobre finanzas. ¡El conocimiento es tu mejor activo!</p>
-  </div>
-</section>
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
 
-<!-- Testimonios -->
-<section id="testimonios">
-  <h2>Testimonios</h2>
-  <div class="card fade-in-up">
-    <p>"Gracias a Finanzas Pro pude salir de mis deudas en menos de 6 meses. Ahora tengo un fondo de emergencia y ahorro cada mes."</p>
-    <strong>— Laura G., CDMX</strong>
-  </div>
-  <div class="card fade-in-up">
-    <p>"Nunca pensé que entender de inversiones fuera tan accesible. Esta web me cambió la vida."</p>
-    <strong>— Carlos M., Monterrey</strong>
-  </div>
-</section>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-<!-- Tabla comparativa de planes -->
-<section>
-  <h2>Planes y Beneficios</h2>
-  <div class="card fade-in-up">
-    <table style="width:100%; text-align:center;">
-      <thead>
-        <tr>
-          <th>Características</th>
-          <th>Gratis</th>
-          <th>Pro</th>
-          <th>Premium</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Acceso a guías</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <td>Asesoría personalizada</td>
-          <td>❌</td>
-          <td>✅</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <td>Plantillas editables</td>
-          <td>❌</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <td>Acceso anticipado a cursos</td>
-          <td>❌</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
 
-<!-- Preguntas Frecuentes -->
-<section id="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <div class="card fade-in-up">
-    <h3>¿Necesito experiencia previa en finanzas?</h3>
-    <p>No. Nuestro contenido está diseñado para todo nivel, desde principiante hasta avanzado.</p>
-  </div>
-  <div class="card fade-in-up">
-    <h3>¿Los recursos son gratuitos?</h3>
-    <p>Muchos de nuestros recursos son gratis. También ofrecemos contenido exclusivo para miembros Pro y Premium.</p>
-  </div>
-  <div class="card fade-in-up">
-    <h3>¿Puedo contactar con un asesor?</h3>
-    <p>Sí, nuestros planes Pro y Premium incluyen sesiones de asesoría financiera personalizadas.</p>
-  </div>
-</section>
+  <script>
+    const canvas = document.getElementById('network');
+    const ctx = canvas.getContext('2d');
 
-<!-- Nuestro equipo -->
-<section id="equipo">
-  <h2>Conoce al Equipo</h2>
-  <div class="card fade-in-up">
-    <h3>Sofía Méndez – Fundadora</h3>
-    <p>Especialista en finanzas personales con más de 10 años ayudando a familias a tomar control de su economía.</p>
-  </div>
-  <div class="card fade-in-up">
-    <h3>Juan Torres – Coach Financiero</h3>
-    <p>Experto en inversiones y planificación financiera. Su pasión es educar y empoderar a los jóvenes.</p>
-  </div>
-</section>
+    let points = [];
+    let width, height;
 
-<!-- Llamado a la acción final -->
-<section class="financial-step">
-  <h2 class="step-title">¡Empieza Hoy!</h2>
-  <p class="step-intro">Suscríbete a nuestro boletín y recibe tips, recursos y consejos exclusivos directamente en tu correo.</p>
-  <form>
-    <label for="nombre2">Nombre:</label>
-    <input type="text" id="nombre2" name="nombre" required />
+    function resizeCanvas() {
+      width = canvas.width = canvas.clientWidth;
+      height = canvas.height = canvas.clientHeight;
+    }
 
-    <label for="email2">Correo electrónico:</label>
-    <input type="email" id="email2" name="email" required />
+    function initPoints() {
+      points = [];
+      for (let i = 0; i < 60; i++) {
+        points.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5
+        });
+      }
+    }
 
-    <button type="submit">Suscribirme</button>
-  </form>
-</section>
+    function distance(p1, p2) {
+      return Math.hypot(p1.x - p2.x, p1.y - p2.y);
+    }
 
-<!-- Footer -->
-<footer>
-  &copy; 2025 Finanzas Pro. Todos los derechos reservados.
-</footer>
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          const dist = distance(points[i], points[j]);
+          if (dist < 120) {
+            ctx.strokeStyle = `rgba(0, 0, 0, ${1 - dist / 120})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      points.forEach((p) => {
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      points.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    function start() {
+      resizeCanvas();
+      initPoints();
+      draw();
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      initPoints();
+    });
+
+    start();
+  </script>
 
 </body>
 </html>
-
-
