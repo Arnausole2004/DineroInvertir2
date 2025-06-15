@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tipos de Inversiones</title>
+
+  <!-- Google Fonts + Iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="tech-header">
+    <h1>Tipos de Inversiones: <br />Guía para elegir la mejor opción</h1>
+    <canvas id="network"></canvas>
+  </header>
+
+  <!-- NAVBAR -->
+  <header class="navbar horizontal">
+    <div class="nav-container">
+      <nav class="nav-links horizontal" aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="tipos.html">Tipos de Inversion</a>
+        <a href="fija.html">Renta Fija</a>
+        <a href="fondos.html">Fondos Indexados</a>
+        <a href="acciones.html">Acciones</a>
+        <a href="criptos.html">Criptomoneda</a>
+        <a href="oro.html">Oro</a>
+        <a href="immuebles.html">Immuebles</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main style="max-width: 900px; margin: 6rem auto 3rem; padding: 0 1rem; font-family: 'Poppins', sans-serif; color: #333;">
+
+    <section aria-label="Introducción a tipos de inversión" data-aos="fade-up">
+      <h2>¿Qué son los tipos de inversión?</h2>
+      <p>
+        Las inversiones son diferentes formas de poner a trabajar tu dinero con la finalidad de obtener rendimientos a futuro. Aquí te explicamos las principales categorías para que puedas elegir la que mejor se adapte a tus objetivos y perfil de riesgo.
+      </p>
+    </section>
+
+    <section id="tipos-inversion" aria-label="Lista de tipos de inversiones" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Tipos de inversiones más comunes</h2>
+      <ul data-aos="fade-up" data-aos-delay="100" style="list-style: none; padding-left: 0;">
+        <li data-aos="fade-up" data-aos-delay="150" style="margin-bottom: 1.5rem;">
+          <i class="fa-solid fa-coins" style="color:#4CAF50; margin-right: 0.7rem;"></i>
+          <strong>Renta fija:</strong> Inversiones con pagos periódicos fijos y menor riesgo.
+        </li>
+        <li data-aos="fade-up" data-aos-delay="200" style="margin-bottom: 1.5rem;">
+          <i class="fa-solid fa-chart-line" style="color:#4CAF50; margin-right: 0.7rem;"></i>
+          <strong>Acciones:</strong> Comprar parte de una empresa para obtener dividendos y plusvalía.
+        </li>
+        <li data-aos="fade-up" data-aos-delay="250" style="margin-bottom: 1.5rem;">
+          <i class="fa-solid fa-piggy-bank" style="color:#4CAF50; margin-right: 0.7rem;"></i>
+          <strong>Fondos indexados:</strong> Fondos que replican índices bursátiles para diversificar.
+        </li>
+        <li data-aos="fade-up" data-aos-delay="300" style="margin-bottom: 1.5rem;">
+          <i class="fa-solid fa-bitcoin-sign" style="color:#4CAF50; margin-right: 0.7rem;"></i>
+          <strong>Criptomonedas:</strong> Activos digitales con alta volatilidad y potencial de alta rentabilidad.
+        </li>
+        <li data-aos="fade-up" data-aos-delay="350" style="margin-bottom: 1.5rem;">
+          <i class="fa-solid fa-gem" style="color:#4CAF50; margin-right: 0.7rem;"></i>
+          <strong>Oro y metales preciosos:</strong> Inversión tradicional para protección contra la inflación.
+        </li>
+        <li data-aos="fade-up" data-aos-delay="400" style="margin-bottom: 1.5rem;">
+          <i class="fa-solid fa-building" style="color:#4CAF50; margin-right: 0.7rem;"></i>
+          <strong>Inmuebles:</strong> Comprar propiedades para rentar o revalorizar con el tiempo.
+        </li>
+      </ul>
+    </section>
+
+    <section id="consejos-tipos" aria-label="Consejos para elegir inversión" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Consejos para elegir el tipo de inversión adecuado</h2>
+      <ul data-aos="fade-up" data-aos-delay="100" style="list-style: disc; margin-left: 1.5rem;">
+        <li>Define tu horizonte de inversión (corto, mediano o largo plazo).</li>
+        <li>Evalúa tu tolerancia al riesgo y capacidad financiera.</li>
+        <li>Diversifica para minimizar riesgos.</li>
+        <li>Infórmate bien antes de invertir en cualquier opción.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    const canvas = document.getElementById('network');
+    const ctx = canvas.getContext('2d');
+
+    let points = [];
+    let width, height;
+
+    function resizeCanvas() {
+      width = canvas.width = canvas.clientWidth;
+      height = canvas.height = canvas.clientHeight;
+    }
+
+    function initPoints() {
+      points = [];
+      for (let i = 0; i < 60; i++) {
+        points.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5
+        });
+      }
+    }
+
+    function distance(p1, p2) {
+      return Math.hypot(p1.x - p2.x, p1.y - p2.y);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          const dist = distance(points[i], points[j]);
+          if (dist < 120) {
+            ctx.strokeStyle = `rgba(0, 0, 0, ${1 - dist / 120})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      points.forEach((p) => {
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      points.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    function start() {
+      resizeCanvas();
+      initPoints();
+      draw();
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      initPoints();
+    });
+
+    start();
+  </script>
+
+</body>
+</html>
 
