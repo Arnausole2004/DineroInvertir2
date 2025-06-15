@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inversión en Inmuebles: patrimonio y rentabilidad</title>
+
+  <!-- Google Fonts + Iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="tech-header">
+    <h1>Inversión en Inmuebles: <br />patrimonio y rentabilidad</h1>
+    <canvas id="network"></canvas>
+  </header>
+
+  <!-- NAVBAR -->
+  <header class="navbar horizontal">
+    <div class="nav-container">
+      <nav class="nav-links horizontal" aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="tipos.html">Tipos de Inversion</a>
+        <a href="fija.html">Renta Fija</a>
+        <a href="fondos.html">Fondos Indexados</a>
+        <a href="acciones.html">Acciones</a>
+        <a href="criptos.html">Criptomoneda</a>
+        <a href="oro.html">Oro</a>
+        <a href="immuebles.html">Inmuebles</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main style="max-width: 900px; margin: 6rem auto 3rem; padding: 0 1rem; font-family: 'Poppins', sans-serif; color: #333;">
+
+    <section aria-label="Introducción a la inversión en inmuebles" data-aos="fade-up">
+      <h2>¿Por qué invertir en inmuebles?</h2>
+      <p>
+        La inversión en inmuebles es una forma tradicional de construir patrimonio a largo plazo. Permite generar ingresos pasivos mediante rentas y apreciar el valor del bien con el tiempo.
+      </p>
+    </section>
+
+    <section id="formas-inversion" aria-label="Formas de invertir en inmuebles" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Formas de invertir en inmuebles</h2>
+      <ul data-aos="fade-up" data-aos-delay="100" style="list-style: disc; margin-left: 1.5rem;">
+        <li>Compra directa de propiedades residenciales o comerciales.</li>
+        <li>Fondos de inversión inmobiliaria (REITs).</li>
+        <li>Proyectos de desarrollo inmobiliario.</li>
+        <li>Compra para alquiler vacacional o tradicional.</li>
+      </ul>
+    </section>
+
+    <section id="ventajas" aria-label="Ventajas de invertir en inmuebles" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Ventajas de invertir en inmuebles</h2>
+      <ul data-aos="fade-up" data-aos-delay="100" style="list-style: disc; margin-left: 1.5rem;">
+        <li>Generación de ingresos pasivos constantes.</li>
+        <li>Protección contra la inflación.</li>
+        <li>Posibilidad de financiar la compra con créditos.</li>
+        <li>Incremento del valor del inmueble con el tiempo.</li>
+      </ul>
+    </section>
+
+    <section id="riesgos" aria-label="Riesgos de invertir en inmuebles" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Riesgos a considerar</h2>
+      <ul data-aos="fade-up" data-aos-delay="100" style="list-style: disc; margin-left: 1.5rem;">
+        <li>Liquidez limitada, la venta puede tardar tiempo.</li>
+        <li>Costos de mantenimiento, impuestos y administración.</li>
+        <li>Riesgo de impago o vacancia en alquileres.</li>
+        <li>Variaciones en el mercado inmobiliario.</li>
+      </ul>
+    </section>
+
+    <section id="consejos" aria-label="Consejos para invertir en inmuebles" style="margin-top: 3rem;">
+      <h2 data-aos="fade-up">Consejos para invertir en inmuebles</h2>
+      <ul data-aos="fade-up" data-aos-delay="100" style="list-style: disc; margin-left: 1.5rem;">
+        <li>Realiza un análisis detallado de la ubicación y mercado.</li>
+        <li>Evalúa el estado físico y legal del inmueble.</li>
+        <li>Considera diversificar con fondos inmobiliarios para menor riesgo.</li>
+        <li>Planifica la inversión a mediano o largo plazo.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    const canvas = document.getElementById('network');
+    const ctx = canvas.getContext('2d');
+
+    let points = [];
+    let width, height;
+
+    function resizeCanvas() {
+      width = canvas.width = canvas.clientWidth;
+      height = canvas.height = canvas.clientHeight;
+    }
+
+    function initPoints() {
+      points = [];
+      for (let i = 0; i < 60; i++) {
+        points.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5
+        });
+      }
+    }
+
+    function distance(p1, p2) {
+      return Math.hypot(p1.x - p2.x, p1.y - p2.y);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          const dist = distance(points[i], points[j]);
+          if (dist < 120) {
+            ctx.strokeStyle = `rgba(0, 0, 0, ${1 - dist / 120})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      points.forEach((p) => {
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      points.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    function start() {
+      resizeCanvas();
+      initPoints();
+      draw();
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      initPoints();
+    });
+
+    start();
+  </script>
+
+</body>
+</html>
 
