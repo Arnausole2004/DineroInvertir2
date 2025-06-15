@@ -1,77 +1,205 @@
+:root {
+  --naranja-pastel: #ffa07a;
+  --verde-pastel: #b5e8b7;
+  --azul-pastel: #add8e6;
+  --gris-texto: #444444;
+  --blanco: #ffffff;
+  --radio: 0.75rem;
+}
+
+/* Reset básico */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fdfdfc;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  color: var(--gris-texto);
+  background: var(--blanco);
+  scroll-behavior: smooth;
   line-height: 1.6;
-}
-
-header {
-  background-color: #fff5e6;
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 1px solid #e4dcd3;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #ff914d;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #777;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  padding: 1rem;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-nav a {
-  text-decoration: none;
-  color: #ff914d;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ff6600;
-}
-
-main {
-  padding: 2rem;
-}
-
-section {
-  margin-bottom: 4rem;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: justify;
 }
 
-h2 {
-  color: #ff914d;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Títulos en naranja pastel */
+h1, h2, h3 {
+  color: var(--naranja-pastel);
+  font-weight: 700;
+}
+
+/* ===== HEADER DE INVERSIÓN ===== */
+.tech-header {
+  background: var(--naranja-pastel);
+  color: var(--blanco);
+  text-align: center;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tech-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tech-header p {
+  font-size: 1.2rem;
+}
+
+/* ===== NAVBAR ===== */
+.navbar.horizontal {
+  background-color: #000;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar.horizontal .nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links.horizontal a {
+  color: white;
+  font-weight: 600;
+  padding-bottom: 4px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links.horizontal a:hover {
+  color: var(--naranja-pastel);
+}
+
+.nav-links.horizontal a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--naranja-pastel);
+  transition: width 0.3s ease;
+}
+
+.nav-links.horizontal a:hover::after {
+  width: 100%;
+}
+
+/* ===== SECCIONES DE CONTENIDO ===== */
+.section {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  text-align: center;
   margin-bottom: 1rem;
 }
 
+.section p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== CONTACTO ===== */
+.contacto-simple {
+  max-width: 480px;
+  margin: 0 auto 4rem;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+}
+
+.contact-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--naranja-pastel);
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radio);
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--naranja-pastel);
+  outline: none;
+  box-shadow: 0 0 6px var(--naranja-pastel);
+}
+
+.contact-form button {
+  width: 100%;
+  background-color: var(--naranja-pastel);
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radio);
+  padding: 0.85rem 1.6rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e88c63;
+}
+
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 1.5rem;
-  background-color: #fff5e6;
+  background-color: #fff3ed;
   color: #888;
   font-size: 0.9rem;
   margin-top: 2rem;
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .tech-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar.horizontal .nav-container {
+    gap: 1rem;
+  }
+}
