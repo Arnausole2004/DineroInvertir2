@@ -80,6 +80,16 @@ h1, h2, h3 {
   position: relative;
   transition: color 0.3s ease;
 }
+.nav-links a {
+  margin-right: 1rem; /* espacio de 1 rem entre enlaces */
+  text-decoration: none; /* opcional, para que no subrayen */
+  color: inherit; /* para mantener el color actual */
+}
+
+/* Para que el último enlace no tenga margen derecho */
+.nav-links a:last-child {
+  margin-right: 0;
+}
 
 .nav-links.horizontal a:hover {
   color: var(--azul-claro);
