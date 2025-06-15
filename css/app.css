@@ -11,8 +11,8 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fffaf0;
-  color: #333;
+  background-color: #e8f0fe; /* azul muy claro en fondo */
+  color: #2c3e8f; /* azul oscuro para texto principal */
   scroll-behavior: smooth;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -27,14 +27,14 @@ img {
 }
 
 a {
-  color: #ff7f50;
+  color: #4a90e2; /* azul vivo para links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #e06b42;
+  color: #357ABD; /* azul más oscuro en hover */
   outline: none;
 }
 
@@ -50,35 +50,35 @@ a:focus {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-weight: 700;
-  color: #4a3721;
+  color: #1a237e; /* azul oscuro para títulos */
   line-height: 1.25;
   letter-spacing: 0.03em;
 }
 
 h1 { font-size: 2.8rem; }
 h2 { font-size: 2.2rem; margin-bottom: 1rem; }
-h3 { font-size: 1.6rem; margin-bottom: 0.75rem; color: #e06b42; }
+h3 { font-size: 1.6rem; margin-bottom: 0.75rem; color: #357ABD; }
 
 p {
   font-size: 1rem;
   margin-bottom: 1.2rem;
-  color: #5d4732;
+  color: #344a99; /* azul medio para párrafos */
 }
 
 strong {
-  color: #ff7f50;
+  color: #4a90e2;
 }
 
 /* ===========================
    Header
 =========================== */
 .header {
-  background-color: #222;
+  background-color: #1a237e; /* azul oscuro */
   padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1100;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(26, 35, 126, 0.7);
 }
 
 .header-container {
@@ -90,7 +90,7 @@ strong {
 .logo {
   font-size: 2rem;
   font-weight: 900;
-  color: #ff7f50;
+  color: #4a90e2; /* azul vivo */
   letter-spacing: 0.1em;
   text-transform: uppercase;
   user-select: none;
@@ -104,24 +104,24 @@ strong {
 .nav a {
   font-weight: 600;
   font-size: 1rem;
-  color: #fff;
+  color: #e3eafc; /* azul muy claro */
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
 }
 
 .nav a:hover,
 .nav a:focus {
-  background-color: #ff7f50;
+  background-color: #4a90e2;
   color: #fff;
   outline: none;
-  box-shadow: 0 0 8px #ff7f50aa;
+  box-shadow: 0 0 8px #4a90e2aa;
 }
 
 /* ===========================
    Hero Section
 =========================== */
 .hero {
-  background: linear-gradient(135deg, #fff1e6 0%, #ffd8b1 100%);
+  background: linear-gradient(135deg, #e8f0fe 0%, #bdd7fc 100%);
   padding: 5rem 1rem 6rem;
   text-align: center;
 }
@@ -129,7 +129,7 @@ strong {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #e06b42;
+  color: #357ABD;
   font-weight: 900;
   letter-spacing: 0.06em;
 }
@@ -138,20 +138,20 @@ strong {
   font-size: 1.25rem;
   max-width: 720px;
   margin: 0 auto 2.5rem;
-  color: #6f4f32;
+  color: #2c3e8f;
 }
 
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #ff7f50;
+  background-color: #4a90e2;
   color: #fff;
   padding: 1rem 3rem;
   border-radius: 12px;
   font-size: 1.25rem;
   font-weight: 700;
-  box-shadow: 0 6px 20px rgba(255, 127, 80, 0.4);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   border: none;
@@ -160,8 +160,8 @@ strong {
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #e06b42;
-  box-shadow: 0 8px 30px rgba(224, 107, 66, 0.6);
+  background-color: #357ABD;
+  box-shadow: 0 8px 30px rgba(53, 122, 189, 0.6);
   outline: none;
 }
 
@@ -172,14 +172,14 @@ section {
   padding: 4rem 1rem;
   max-width: 900px;
   margin: 0 auto 4rem;
-  background: #fff5e6;
+  background: #d6e4fc; /* azul pastel muy claro */
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(255, 127, 80, 0.15);
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.15);
 }
 
 section h2 {
   text-align: center;
-  color: #ff7f50;
+  color: #4a90e2;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -191,16 +191,16 @@ section h2 {
 =========================== */
 .financial-step {
   padding: 2rem 2.5rem;
-  background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+  background: linear-gradient(135deg, #d6e4fc 0%, #b0c9fb 100%);
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(255, 127, 80, 0.25);
-  color: #4a3721;
+  box-shadow: 0 6px 18px rgba(74, 144, 226, 0.25);
+  color: #1a237e;
   line-height: 1.6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .financial-step .step-title {
-  color: #ff7f50;
+  color: #4a90e2;
   font-size: 2.4rem;
   font-weight: 800;
   margin-bottom: 1.4rem;
@@ -214,23 +214,23 @@ section h2 {
   font-weight: 500;
   margin-bottom: 1.8rem;
   text-align: center;
-  color: #5d4732;
+  color: #2c3e8f;
 }
 
 .financial-step .step-content h3 {
-  color: #e06b42;
+  color: #357ABD;
   font-weight: 700;
   font-size: 1.4rem;
   margin-top: 1.2rem;
   margin-bottom: 0.5rem;
-  border-left: 5px solid #ff7f50;
+  border-left: 5px solid #4a90e2;
   padding-left: 0.8rem;
   letter-spacing: 0.5px;
 }
 
 .financial-step .step-content p {
   font-size: 1rem;
-  color: #5d4732;
+  color: #2c3e8f;
   margin-bottom: 1rem;
   text-align: justify;
 }
@@ -242,16 +242,16 @@ form {
   max-width: 600px;
   margin: 0 auto;
   padding: 1.5rem 2rem;
-  background: #fff5e6;
+  background: #d6e4fc;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(255, 127, 80, 0.15);
+  box-shadow: 0 6px 18px rgba(74, 144, 226, 0.15);
 }
 
 form label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #4a3721;
+  color: #1a237e;
 }
 
 form input[type="text"],
@@ -263,12 +263,13 @@ form select {
   padding: 0.8rem 1rem;
   margin-bottom: 1.2rem;
   border-radius: 8px;
-  border: 1.8px solid #ffb38a;
+  border: 1.8px solid #9bc1ff;
   font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.3s ease;
-  color: #5d4732;
+  color: #2c3e8f;
   resize: vertical;
+  background: #f5faff;
 }
 
 form input[type="text"]:focus,
@@ -276,9 +277,9 @@ form input[type="email"]:focus,
 form input[type="tel"]:focus,
 form textarea:focus,
 form select:focus {
-  border-color: #ff7f50;
+  border-color: #4a90e2;
   outline: none;
-  box-shadow: 0 0 8px #ff7f50aa;
+  box-shadow: 0 0 8px #4a90e2aa;
 }
 
 form textarea {
@@ -286,7 +287,7 @@ form textarea {
 }
 
 form button[type="submit"] {
-  background-color: #ff7f50;
+  background-color: #4a90e2;
   color: #fff;
   border: none;
   padding: 1rem 2.5rem;
@@ -294,14 +295,14 @@ form button[type="submit"] {
   font-weight: 700;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(255, 127, 80, 0.4);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 form button[type="submit"]:hover,
 form button[type="submit"]:focus {
-  background-color: #e06b42;
-  box-shadow: 0 8px 30px rgba(224, 107, 66, 0.6);
+  background-color: #357ABD;
+  box-shadow: 0 8px 30px rgba(53, 122, 189, 0.6);
   outline: none;
 }
 
@@ -309,10 +310,10 @@ form button[type="submit"]:focus {
    Cards
 =========================== */
 .card {
-  background: #fff5e6;
+  background: #d6e4fc;
   border-radius: 12px;
   padding: 2rem 2.5rem;
-  box-shadow: 0 6px 18px rgba(255, 127, 80, 0.2);
+  box-shadow: 0 6px 18px rgba(74, 144, 226, 0.2);
   margin-bottom: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -320,16 +321,16 @@ form button[type="submit"]:focus {
 .card:hover,
 .card:focus-within {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(255, 127, 80, 0.35);
+  box-shadow: 0 12px 30px rgba(74, 144, 226, 0.35);
 }
 
 .card h3 {
   margin-top: 0;
-  color: #e06b42;
+  color: #357ABD;
 }
 
 .card p {
-  color: #5d4732;
+  color: #2c3e8f;
 }
 
 /* ===========================
@@ -338,7 +339,7 @@ form button[type="submit"]:focus {
 ul, ol {
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #5d4732;
+  color: #2c3e8f;
   font-size: 1rem;
 }
 
@@ -350,7 +351,7 @@ li {
    Footer
 =========================== */
 footer {
-  background-color: #ff7f50;
+  background-color: #4a90e2;
   color: #fff;
   text-align: center;
   padding: 1.5rem 1rem;
@@ -389,34 +390,18 @@ footer {
 =========================== */
 @media (max-width: 1024px) {
   h1 { font-size: 2.4rem; }
-  h2 { font-size: 1.8rem; }
-  .container { padding: 0 1rem; }
+  h2 { font-size: 1.9rem; }
+  h3 { font-size: 1.3rem; }
 }
 
 @media (max-width: 768px) {
-  .nav { gap: 1rem; }
-  .btn-primary { padding: 0.8rem 2rem; font-size: 1.1rem; }
-}
-
-@media (max-width: 480px) {
-  h1 { font-size: 2rem; }
-  .btn-primary {
-    width: 100%;
-    padding: 1rem 0;
-    font-size: 1.2rem;
-    border-radius: 8px;
-  }
-  .header-container {
-    flex-direction: column;
+  .nav {
     gap: 1rem;
   }
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
+  .container {
+    padding: 0 0.75rem;
   }
   section {
-    padding: 2rem 1rem;
-    margin-bottom: 3rem;
+    padding: 2.5rem 1rem;
   }
 }
-
