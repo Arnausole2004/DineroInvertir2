@@ -32,8 +32,6 @@
         <a href="#objetivos">Objetivos Financieros</a>
         <a href="#pasos">Pasos Básicos</a>
         <a href="#consejos">Consejos</a>
-        <a href="#testimonios">Testimonios</a>
-        <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
@@ -43,7 +41,7 @@
 
     <!-- OBJETIVOS FINANCIEROS -->
     <section id="objetivos" aria-label="Objetivos financieros">
-      <h2 data-aos="fade-up">Establece tus objetivos financieros</h2>
+      <h2 data-aos="fade-up" style="color: var(--blue-primary);">Establece tus objetivos financieros</h2>
       <p data-aos="fade-up" data-aos-delay="100">
         Definir metas claras es el primer paso para mejorar tus finanzas personales. Pueden ser a corto, mediano o largo plazo.
       </p>
@@ -57,7 +55,7 @@
 
     <!-- PASOS BÁSICOS -->
     <section id="pasos" aria-label="Pasos básicos para mejorar tus finanzas" style="margin-top: 3rem;">
-      <h2 data-aos="fade-up">Pasos básicos para mejorar tus finanzas hoy</h2>
+      <h2 data-aos="fade-up" style="color: var(--blue-primary);">Pasos básicos para mejorar tus finanzas hoy</h2>
       <ol data-aos="fade-up" data-aos-delay="100">
         <li><strong>Evalúa tu situación actual:</strong> Conoce cuánto ganas, gastas y debes.</li>
         <li><strong>Haz un presupuesto realista:</strong> Controla tus ingresos y gastos mensuales.</li>
@@ -69,29 +67,29 @@
 
     <!-- CONSEJOS -->
     <section id="consejos" aria-label="Consejos para finanzas personales" style="margin-top: 3rem;">
-      <h2 data-aos="fade-up">Consejos para mantener unas finanzas saludables</h2>
+      <h2 data-aos="fade-up" style="color: var(--blue-primary);">Consejos para mantener unas finanzas saludables</h2>
       <div data-aos="fade-up" data-aos-delay="100" style="margin-bottom: 1.5rem;">
-        <i class="fa-solid fa-wallet" style="color:#4CAF50; margin-right:0.5rem;"></i>
+        <i class="fa-solid fa-wallet" style="color: var(--blue-primary); margin-right:0.5rem;"></i>
         <strong>Controla tus gastos diarios.</strong> Llevar un registro te ayuda a evitar gastos impulsivos.
       </div>
       <div data-aos="fade-up" data-aos-delay="200" style="margin-bottom: 1.5rem;">
-        <i class="fa-solid fa-piggy-bank" style="color:#4CAF50; margin-right:0.5rem;"></i>
+        <i class="fa-solid fa-piggy-bank" style="color: var(--blue-primary); margin-right:0.5rem;"></i>
         <strong>Crea un fondo de emergencia.</strong> Guarda al menos 3 meses de gastos básicos para imprevistos.
       </div>
       <div data-aos="fade-up" data-aos-delay="300" style="margin-bottom: 1.5rem;">
-        <i class="fa-solid fa-book" style="color:#4CAF50; margin-right:0.5rem;"></i>
+        <i class="fa-solid fa-book" style="color: var(--blue-primary); margin-right:0.5rem;"></i>
         <strong>Educa continuamente.</strong> Lee libros y sigue cursos para mejorar tu conocimiento financiero.
       </div>
     </section>
 
     <!-- TESTIMONIOS -->
     <section id="testimonios" aria-label="Testimonios de usuarios" style="margin-top: 3rem;">
-      <h2 data-aos="fade-up">Testimonios</h2>
-      <blockquote data-aos="fade-up" data-aos-delay="100" style="font-style: italic; border-left: 4px solid #4CAF50; padding-left: 1rem; margin-bottom: 2rem;">
+      <h2 data-aos="fade-up" style="color: var(--blue-primary);">Testimonios</h2>
+      <blockquote data-aos="fade-up" data-aos-delay="100" style="font-style: italic; border-left: 4px solid var(--blue-primary); padding-left: 1rem; margin-bottom: 2rem;">
         "Esta guía me ayudó a organizar mis finanzas y empezar a ahorrar para mi primer inversión. ¡Muy recomendada!"
         <br /><strong>— Ana R.</strong>
       </blockquote>
-      <blockquote data-aos="fade-up" data-aos-delay="200" style="font-style: italic; border-left: 4px solid #4CAF50; padding-left: 1rem;">
+      <blockquote data-aos="fade-up" data-aos-delay="200" style="font-style: italic; border-left: 4px solid var(--blue-primary); padding-left: 1rem;">
         "Gracias a los consejos y pasos claros, pude reducir mis deudas y mejorar mi presupuesto mensual."
         <br /><strong>— Jorge M.</strong>
       </blockquote>
@@ -100,7 +98,7 @@
     <!-- FORMULARIO DE CONTACTO -->
     <section id="contacto" class="contacto-simple" aria-label="Formulario de contacto" style="margin-top: 3rem;">
       <div class="contacto-box" data-aos="fade-up">
-        <h2 class="contact-title">Contacto</h2>
+        <h2 class="contact-title" style="color: var(--blue-primary);">Contacto</h2>
         <form class="contact-form" action="/tu-endpoint" method="POST">
           <label for="name">Nombre</label>
           <input type="text" id="name" name="name" placeholder="Tu nombre" required />
@@ -111,7 +109,7 @@
           <label for="message">Mensaje</label>
           <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
 
-          <button type="submit">Enviar</button>
+          <button type="submit" style="background-color: var(--blue-primary); color: white;">Enviar</button>
         </form>
       </div>
     </section>
@@ -156,7 +154,7 @@
         for (let j = i + 1; j < points.length; j++) {
           const dist = distance(points[i], points[j]);
           if (dist < 120) {
-            ctx.strokeStyle = `rgba(0, 0, 0, ${1 - dist / 120})`;
+            ctx.strokeStyle = `rgba(0, 102, 204, ${1 - dist / 120})`; // azul con opacidad según distancia
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(points[i].x, points[i].y);
@@ -167,7 +165,7 @@
       }
 
       points.forEach((p) => {
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = 'rgb(0, 102, 204)'; // azul para puntos
         ctx.beginPath();
         ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
         ctx.fill();
@@ -200,3 +198,4 @@
 
 </body>
 </html>
+
